@@ -1,8 +1,9 @@
 import React from 'react';
+import './Answer.css';
 
 const Answer = ({text, onAnswerClick}) => {
     return (
-        <div onClick={() => onAnswerClick(text)}>
+        <div className="answer" onClick={() => onAnswerClick(text)}>
             {text}
         </div>
     )

@@ -5,6 +5,7 @@ import Question from './Question';
 import Correct from './Correct';
 import Incorrect from './Incorrect';
 import Final from './Final';
+import './App.css';
 
 class App extends React.Component {
     state = {
@@ -43,64 +44,87 @@ class App extends React.Component {
             display: 0,
         })
     }
+
+    percent = (correct, total) => {
+        return (
+            Math.round((correct / total) * 100)
+        );
+    }
     
     render() {
         if (this.state.display === 0) {
             return (
-                <div>
-                    <Intro 
-                        image={quizInfo.intro.image}
-                        message={quizInfo.intro.message}
-                        nextQuestion={this.nextQuestion}
-                    />
+                <div className="app">
+                    <div>
+                        <Intro 
+                            totalQuestions={quizInfo.questions.length}
+                            title={quizInfo.title}
+                            message={quizInfo.intro.message}
+                            nextQuestion={this.nextQuestion}
+                        />
+                    </div>
                 </div>
             )
         } else if (this.state.display === 1) {
             return (
-                <div>
-                    <Question 
-                        image={quizInfo.questions[this.state.currentQuestion - 1].image}
-                        question={quizInfo.questions[this.state.currentQuestion - 1].question}
-                        answer1={quizInfo.questions[this.state.currentQuestion - 1].answer1}
-                        answer2={quizInfo.questions[this.state.currentQuestion - 1].answer2}
-                        answer3={quizInfo.questions[this.state.currentQuestion - 1].answer3}
-                        answer4={quizInfo.questions[this.state.currentQuestion - 1].answer4}
-                        onAnswerClick = {this.onAnswerClick}
-                        nextQuestion={this.nextQuestion}
-                    />
+                <div className="app">
+                    <div>
+                        <Question 
+                            currentQuestion={this.state.currentQuestion}
+                            totalQuestions={quizInfo.questions.length}
+                            image={quizInfo.questions[this.state.currentQuestion - 1].image}
+                            question={quizInfo.questions[this.state.currentQuestion - 1].question}
+                            answer1={quizInfo.questions[this.state.currentQuestion - 1].answer1}
+                            answer2={quizInfo.questions[this.state.currentQuestion - 1].answer2}
+                            answer3={quizInfo.questions[this.state.currentQuestion - 1].answer3}
+                            answer4={quizInfo.questions[this.state.currentQuestion - 1].answer4}
+                            onAnswerClick = {this.onAnswerClick}
+                            nextQuestion={this.nextQuestion}
+                        />
+                    </div>
                 </div>
             )
         } else if (this.state.display === 2) {
             return (
-                <div>
-                    <Correct
-                        image={quizInfo.correct.image}
-                        message={quizInfo.correct.message}
-                        nextQuestion={this.nextQuestion}
-                    />
+                <div className="app">
+                    <div>
+                        <Correct
+                            currentQuestion={this.state.currentQuestion}
+                            totalQuestions={quizInfo.questions.length}
+                            image={quizInfo.correct.image}
+                            message={quizInfo.correct.message}
+                            nextQuestion={this.nextQuestion}
+                        />
+                    </div>
                 </div>
             )
         } else if (this.state.display === 3) {
             return (
-                <div>
-                    <Incorrect
-                        image={quizInfo.incorrect.image}
-                        message={quizInfo.incorrect.message}
-                        nextQuestion={this.nextQuestion}
-                    />
+                <div className="app">
+                    <div>
+                        <Incorrect
+                            currentQuestion={this.state.currentQuestion}
+                            totalQuestions={quizInfo.questions.length}
+                            image={quizInfo.incorrect.image}
+                            message={quizInfo.incorrect.message}
+                            nextQuestion={this.nextQuestion}
+                        />
+                    </div>
                 </div>
             )
         } else if (this.state.display === 4) {
             return (
-                <div>
-                    <Final 
-                        image={quizInfo.final.image}
-                        message={quizInfo.final.message}
-                        totalCorrect={this.state.totalCorrect}
-                        totalQuestions={quizInfo.questions.length}
-                        percentCorrect={this.state.totalCorrect / quizInfo.questions.length}
-                        takeQuizAgain={this.takeQuizAgain}
-                    />
+                <div className="app">
+                    <div>
+                        <Final 
+                            image={quizInfo.final.image}
+                            message={quizInfo.final.message}
+                            totalCorrect={this.state.totalCorrect}
+                            totalQuestions={quizInfo.questions.length}
+                            percentCorrect={this.percent(this.state.totalCorrect, quizInfo.questions.length)}
+                            takeQuizAgain={this.takeQuizAgain}
+                        />
+                    </div>
                 </div>
             )
         }
