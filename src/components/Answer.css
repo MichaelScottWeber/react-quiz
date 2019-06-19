@@ -1,11 +1,12 @@
 .answer {
     border: 2px solid white;
+    border-radius: 5px;
     padding: 20px;
     cursor: pointer;
     margin: 5px 0;
 }
 
 .answer:hover, .answer:focus {
-    background-color: white;
-    color: black;
+    background-color: darkslategray;
+    color: snow;
 }

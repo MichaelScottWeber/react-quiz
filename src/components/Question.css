@@ -10,6 +10,10 @@
     text-align: center;
 }
 
+h2 {
+    font-weight: 200;
+}
+
 .info-group {
     display: flex;
     flex-direction: column;
@@ -25,7 +29,7 @@
 }
 
 .line {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid snow;
     width: 10px;
     flex-grow: 1;
 }

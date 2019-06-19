@@ -52,7 +52,7 @@ const quizInfo = {
     },
     incorrect: {
         image: 'https://www.colourbox.com/preview/12004558-incorrect.jpg',
-        message: 'WRONG! Better luck next time',
+        message: 'Wrong answer, see how you do on the next question!',
     },
     final: {
         image: 'https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',

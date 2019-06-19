@@ -9,9 +9,11 @@ const Intro = (props) => {
                 <p>{props.totalQuestions} Questions</p>
                 <div className="line"></div>
             </div>
-            <h1>{props.title}</h1>
-            <p>{props.message}</p>
-            <div className="button" onClick={props.nextQuestion}>Begin</div>
+            <div className="intro-items">
+                <h1>{props.title}</h1>
+                <p>{props.message}</p>
+                <div className="button" onClick={props.nextQuestion}>Begin</div>
+            </div>
         </div>
     )
 }

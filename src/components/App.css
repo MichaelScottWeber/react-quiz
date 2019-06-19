@@ -2,10 +2,20 @@
     box-sizing: border-box;
     background: url('https://images.unsplash.com/photo-1519508234439-4f23643125c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80') no-repeat center;
     background-size: cover;
-    color: white;
+    color: snow;
     font-family: 'Raleway', sans-serif;
     font-size: 1.3em;
     min-height: 100vh;
     height: 100%;
     width: 100vw;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+@media (max-width: 400px) {
+    .app {
+        font-size: 1em;
+    }
 }
