@@ -1,39 +1,60 @@
 import React from 'react';
+import {Spring} from 'react-spring/renderprops';
 import Answer from './Answer';
 import './Question.css';
 
-const Question = (props) => {
+const Question = ({ currentQuestion, totalQuestions, image, question, answer1, answer2, answer3, answer4, onAnswerClick }) => {
     return (
         <div className="question">
             <div className="top-info">
                 <div className="line"></div>
-                <p>{props.currentQuestion} of {props.totalQuestions} </p>
+                <p>{currentQuestion} of {totalQuestions} </p>
                 <div className="line"></div>
             </div>
-            <div className="img-container">
-                <img className="img" src={props.image} /> 
-            </div>
-            <div className="question-group">
-                <h2 className="question-text">{props.question}</h2>
-                <div className="answer-group">
-                    <Answer 
-                        text={props.answer1} 
-                        onAnswerClick={props.onAnswerClick}
-                    />
-                    <Answer 
-                        text={props.answer2} 
-                        onAnswerClick={props.onAnswerClick}
-                    />
-                    <Answer 
-                        text={props.answer3} 
-                        onAnswerClick={props.onAnswerClick}
-                    />
-                    <Answer 
-                        text={props.answer4} 
-                        onAnswerClick={props.onAnswerClick}
-                    />
-                </div>
-            </div>
+            <Spring
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+            >
+                {props => (
+                    <div 
+                        style={props}
+                        className="img-container"
+                    >
+                        <img className="img" src={image} /> 
+                    </div>
+                )}
+            </Spring>
+            <Spring
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+            >
+                {props => (
+                    <div 
+                        style={props}
+                        className="question-group"
+                    >
+                        <h2 className="question-text">{question}</h2>
+                        <div className="answer-group">
+                            <Answer 
+                                text={answer1} 
+                                onAnswerClick={onAnswerClick}
+                            />
+                            <Answer 
+                                text={answer2} 
+                                onAnswerClick={onAnswerClick}
+                            />
+                            <Answer 
+                                text={answer3} 
+                                onAnswerClick={onAnswerClick}
+                            />
+                            <Answer 
+                                text={answer4} 
+                                onAnswerClick={onAnswerClick}
+                            />
+                        </div>
+                    </div>
+                )}
+            </Spring>
         </div>
     )
 }

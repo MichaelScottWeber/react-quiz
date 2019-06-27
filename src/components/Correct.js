@@ -1,19 +1,51 @@
 import React from 'react';
+import {Spring} from 'react-spring/renderprops';
 import './Correct.css';
 
-const Correct = (props) => {
+const Correct = ({ currentQuestion, totalQuestions, image, message, nextQuestion }) => {
     return (
         <div className="correct">
             <div className="top-info">
                 <div className="line"></div>
-                <p>{props.currentQuestion} of {props.totalQuestions} </p>
+                <p>{currentQuestion} of {totalQuestions} </p>
                 <div className="line"></div>
             </div>
-            <div className="img-container">
-                <img className="img" src={props.image} />
-            </div>
-            <p>{props.message}</p>
-            <div className="button" onClick={props.nextQuestion}>NEXT</div>
+            <Spring
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+            >
+                {props => (
+                    <div 
+                        style={props}
+                        className="img-container"
+                    >
+                        <img className="img" src={image} />
+                    </div>
+                
+                )}
+            </Spring>
+            <Spring
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+            >
+                {props => (
+                    <p style={props}>{message}</p>
+                )}
+            </Spring>
+            <Spring
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+            >
+                {props => (
+                    <div 
+                        style={props}
+                        className="button" 
+                        onClick={nextQuestion}
+                    >
+                        NEXT
+                    </div>
+            )}
+            </Spring>
         </div>
     )
 }
