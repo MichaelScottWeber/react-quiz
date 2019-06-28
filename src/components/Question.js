@@ -25,8 +25,8 @@ const Question = ({ currentQuestion, totalQuestions, image, question, answer1, a
                 )}
             </Spring>
             <Spring
-                from={{ opacity: 0 }}
-                to={{ opacity: 1 }}
+                from={{ opacity: 0, marginRight: -500 }}
+                to={{ opacity: 1, marginRight: 0 }}
             >
                 {props => (
                     <div 

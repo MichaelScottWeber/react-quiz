@@ -1,18 +1,30 @@
 import React from 'react';
+import {Spring} from 'react-spring/renderprops';
 import './Intro.css';
 
-const Intro = (props) => {
+const Intro = ({ totalQuestions, title, message, nextQuestion }) => {
     return (
         <div className="intro">
-            <div className="top-info">
-                <div className="line"></div>
-                <p>{props.totalQuestions} Questions</p>
-                <div className="line"></div>
-            </div>
+            <Spring
+                from={{ marginTop: -500 }}
+                to={{ marginTop: 0 }}
+            >
+                {props => (
+                    <div 
+                        style={props}
+                        className="top-info"
+                    >
+                        <div className="line"></div>
+                        <p>{totalQuestions} Questions</p>
+                        <div className="line"></div>
+                    </div>
+                )}
+            </Spring>
+            
             <div className="intro-items">
-                <h1>{props.title}</h1>
-                <p>{props.message}</p>
-                <div className="button" onClick={props.nextQuestion}>Begin</div>
+                <h1>{title}</h1>
+                <p className="message">{message}</p>
+                <div className="button" onClick={nextQuestion}>Begin</div>
             </div>
         </div>
     )

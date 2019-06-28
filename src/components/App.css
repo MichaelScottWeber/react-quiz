@@ -19,3 +19,12 @@ h1 {
         font-size: 1em;
     }
 }
+
+.top-info {
+    font-size: .9em;
+    opacity: .75;
+}
+
+.message {
+    color: rgba(255, 250, 250, .65);
+}

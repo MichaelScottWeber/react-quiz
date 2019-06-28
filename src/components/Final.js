@@ -8,6 +8,7 @@ const Final = ({ totalCorrect, totalQuestions, percentCorrect, takeQuizAgain }) 
             <Spring
                 from={{ opacity: 0 }}
                 to={{ opacity: 1 }}
+                config={{ delay: 200, duration: 1000 }}
             >
                 {props => (
                     <div 

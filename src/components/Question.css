@@ -29,7 +29,7 @@ h2 {
 }
 
 .line {
-    border-bottom: 2px solid snow;
+    border-bottom: 1px solid snow;
     width: 10px;
     flex-grow: 1;
 }

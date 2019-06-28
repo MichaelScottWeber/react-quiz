@@ -1,5 +1,6 @@
 import React from 'react';
 import {Spring} from 'react-spring/renderprops';
+import CorrectImg from '../images/correct.jpg';
 import './Correct.css';
 
 const Correct = ({ currentQuestion, totalQuestions, image, message, nextQuestion }) => {
@@ -19,7 +20,7 @@ const Correct = ({ currentQuestion, totalQuestions, image, message, nextQuestion
                         style={props}
                         className="img-container"
                     >
-                        <img className="img" src={image} />
+                        <img className="img" src={CorrectImg} />
                     </div>
                 
                 )}
@@ -29,7 +30,12 @@ const Correct = ({ currentQuestion, totalQuestions, image, message, nextQuestion
                 to={{ opacity: 1 }}
             >
                 {props => (
-                    <p style={props}>{message}</p>
+                    <p 
+                        style={props}
+                        className="message"
+                    >
+                        {message}
+                    </p>
                 )}
             </Spring>
             <Spring
