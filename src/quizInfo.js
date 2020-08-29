@@ -47,7 +47,7 @@ const quizInfo = {
         },
         {
             id: 4,
-            image: 'https://www.guitarplayer.com/.image/t_share/MTUxNDE4MjM5NjAzNTE2NjQ2/image-placeholder-title.jpg',
+            image: 'https://cdn.shopify.com/s/files/1/0916/0836/products/48021_Gibson_ES-175_A23737_1_ed2a60b4-7b19-42da-8fb8-46606ffc5fb6_4000x.progressive.jpg?v=1596119991',
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Gibson ES-175',
             answer1: 'Gibson ES-335',
