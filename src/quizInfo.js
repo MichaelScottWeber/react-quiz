@@ -1,3 +1,14 @@
+import Guitar1 from './images/Guitar-1.jpg';
+import Guitar2 from './images/Guitar-2.jpg';
+import Guitar3 from './images/Guitar-3.jpg';
+import Guitar4 from './images/Guitar-4.jpg';
+import Guitar5 from './images/Guitar-5.jpg';
+import Guitar6 from './images/Guitar-6.jpg';
+import Guitar7 from './images/Guitar-7.jpg';
+import Guitar8 from './images/Guitar-8.jpg';
+import Correct from './images/correct.jpg';
+import Incorrect from './images/incorrect.jpg';
+
 const quizInfo = {
     title: 'Can You Identify These Guitars?',
     intro: {
@@ -7,7 +18,7 @@ const quizInfo = {
     questions: [
         {
             id: 0,
-            image: 'https://d1aeri3ty3izns.cloudfront.net/media/32/326049/1200/preview.jpg',
+            image: Guitar1,
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Fender Jaguar',
             answer1: 'Ibanez Talman',
@@ -17,7 +28,7 @@ const quizInfo = {
         },
         {
             id: 1,
-            image: 'https://thehub.musiciansfriend.com/images/guitarsguide/gibson2018/Gibson-J45-Standard.jpg',
+            image: Guitar2,
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Gibson J-45',
             answer1: 'Gibson Hummingbird',
@@ -27,7 +38,7 @@ const quizInfo = {
         },
         {
             id: 2,
-            image: 'https://images.reverb.com/image/upload/s--mwRCLtF9--/a_exif,c_limit,e_unsharp_mask:80,f_auto,fl_progressive,g_south,h_620,q_90,w_620/v1384829641/hcgziqa7hgkw4lwul2ch.jpg',
+            image: Guitar3,
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Gretsch Electromatic Double Jet',
             answer1: 'Gretsch Electromatic Double Jet',
@@ -37,7 +48,7 @@ const quizInfo = {
         },
         {
             id: 3,
-            image: 'https://d1aeri3ty3izns.cloudfront.net/media/24/245579/1200/preview.jpg',
+            image: Guitar4,
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Martin D-18',
             answer1: 'Martin D-28',
@@ -47,7 +58,7 @@ const quizInfo = {
         },
         {
             id: 4,
-            image: 'https://cdn.shopify.com/s/files/1/0916/0836/products/48021_Gibson_ES-175_A23737_1_ed2a60b4-7b19-42da-8fb8-46606ffc5fb6_4000x.progressive.jpg?v=1596119991',
+            image: Guitar5,
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Gibson ES-175',
             answer1: 'Gibson ES-335',
@@ -57,8 +68,7 @@ const quizInfo = {
         },
         {
             id: 5,
-            image: 'https://images.reverb.com/image/upload/s--rcxP-2go--/f_auto,t_large/v1560256471/hytqr785kf2flq0st4qq.jpg',
-            question: 'Which famous guitar is pictured above?',
+            image: Guitar6,
             correctAnswer: 'B.C. Rich Mockingbird',
             answer1: 'Dean ML 79',
             answer2: 'Dean Razorback',
@@ -67,7 +77,7 @@ const quizInfo = {
         },
         {
             id: 6,
-            image: 'https://images.reverb.com/image/upload/s--aWlg-Vug--/a_exif,c_limit,e_unsharp_mask:80,f_auto,fl_progressive,g_south,h_620,q_90,w_620/v1522700705/aulj3vsq0kyjockv6xwa.jpg',
+            image: Guitar7,
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Rickenbacker 360/12',
             answer1: 'Rickenbacker 360/12',
@@ -77,7 +87,7 @@ const quizInfo = {
         },
         {
             id: 7,
-            image: 'https://www.rainbowguitars.com/imagesproduct/us/usto414cev-xl-02.jpg',
+            image: Guitar8,
             question: 'Which famous guitar is pictured above?',
             correctAnswer: 'Taylor 414ce',
             answer1: 'Taylor 414ce',
@@ -87,11 +97,11 @@ const quizInfo = {
         },
     ],
     correct: {
-        image: 'https://www.colourbox.com/preview/12004600-correct.jpg',
+        image: Correct,
         message: 'Correct!  Nice job',
     },
     incorrect: {
-        image: 'https://www.colourbox.com/preview/12004558-incorrect.jpg',
+        image: Incorrect,
         message: 'Wrong answer, see how you do on the next question!',
     },
     final: {
